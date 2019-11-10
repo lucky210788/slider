@@ -1,0 +1,34 @@
+.slides-list {
+  width: 100%;
+  display: flex;
+}
+
+.slide-wrap {
+  min-width: 100%;
+  position: relative;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.slider-wrap{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-control{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn{
+  left: 0;
+}
+
+.next-btn{
+  right: 0;
+}
