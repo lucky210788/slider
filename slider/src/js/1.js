@@ -1,5 +1,4 @@
 "use strict";
-
 window.onload = function () {
 
     let slider = new Slider({

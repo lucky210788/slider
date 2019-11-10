@@ -116,7 +116,6 @@ let isPalindrome = (str) => {
 // isPalindrome('abcd');
 // isPalindrome('A man a plan a canal Panama');
 
-
 let missing = (arr) => {
     let newArr = arr.slice().sort(function (a, b) {
         return a - b;
@@ -147,7 +146,6 @@ let missing = (arr) => {
 // missing([2, 3, 4]);                  // 1
 // missing([5, 1, 4, 2]);               // 3
 // missing([1, 2, 3, 4]);               // undefined
-
 
 let isBalanced = (str) => {
     str.split('');
