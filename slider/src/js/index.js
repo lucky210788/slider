@@ -1,4 +1,4 @@
 import 'babel-polyfill';
 
-import './../sass/style.scss';
+import '../assets/sass/style.scss';
 import './1.js';
