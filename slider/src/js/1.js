@@ -1,17 +1,17 @@
 "use strict";
 window.onload = function () {
 
-    let slider = new Slider({
-        images: '.slide-wrap',
-        btnPrev: document.querySelector('.prev-btn'),
-        btnNext: document.querySelector('.next-btn'),
-        autoplay: false
-    });
+let slider = new Slider({
+    images: '.slide-wrap',
+    btnPrev: document.querySelector('.prev-btn'),
+    btnNext: document.querySelector('.next-btn'),
+    autoplay: false
+});
 
 };
 
 function Slider(obj) {
-    let thet = this;
+    let that = this;
 
     addCloneSlides();
 
@@ -76,16 +76,16 @@ function Slider(obj) {
     });
 
     function moveLeft() {
-        thet.images[i].classList.remove('active-slide');
+        that.images[i].classList.remove('active-slide');
         i--;
 
         if (i < 0) {
-            i = thet.images.length - 1;
+            i = that.images.length - 1;
         }
 
         let nextPosX = -(i) * widthScreen;
         let prevPosX = -(i + 1) * widthScreen;
-        let getAtr = thet.images[i].getAttribute('data-clone');
+        let getAtr = that.images[i].getAttribute('data-clone');
         let tempPos = nextPosX - 3;
 
         flag = false;
@@ -100,8 +100,8 @@ function Slider(obj) {
                     }
                 }
             }, 0);
-            i = thet.images.length - 2;
-            thet.images[i].classList.add('active-slide');
+            i = that.images.length - 2;
+            that.images[i].classList.add('active-slide');
             container.style.transform = `translateX(${-i * widthScreen}px)`;
         } else {
             setInterval(function () {
@@ -114,21 +114,21 @@ function Slider(obj) {
                 }
             }, 0);
 
-            thet.images[i].classList.add('active-slide');
+            that.images[i].classList.add('active-slide');
         }
     }
 
     function moveRight() {
-        thet.images[i].classList.remove('active-slide');
+        that.images[i].classList.remove('active-slide');
         i++;
 
-        if (i >= thet.images.length) {
+        if (i >= that.images.length) {
             i = 0;
         }
 
         let prevPosX = -(i - 1) * widthScreen;
         let nextPosX = -i * widthScreen;
-        let getAtr = thet.images[i].getAttribute('data-clone');
+        let getAtr = that.images[i].getAttribute('data-clone');
         let tempPos = prevPosX - widthScreen - 2;
 
         flag = false;
@@ -144,7 +144,7 @@ function Slider(obj) {
                 }
             }, 0);
             i = 1;
-            thet.images[i].classList.add('active-slide');
+            that.images[i].classList.add('active-slide');
             container.style.transform = `translateX(${-(i - 1) * widthScreen}px)`;
         } else {
             setInterval(function () {
@@ -156,7 +156,7 @@ function Slider(obj) {
                     }
                 }
             }, 0);
-            thet.images[i].classList.add('active-slide');
+            that.images[i].classList.add('active-slide');
         }
     }
 
