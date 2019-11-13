@@ -9,11 +9,7 @@ let isPrime = (num) => {
         }
     }
 
-    if (count === 2) {
-        return true
-    }
-
-    return false
+    return count === 2
 };
 
 // isPrime(0);
